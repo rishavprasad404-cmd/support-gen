@@ -1,0 +1,9 @@
+SupportGen - Windows quick start
+
+1. Do NOT open the .zip file in VS Code or Notepad. A zip is a compressed archive, and editors
+   show "file is binary or uses an unsupported text encoding" for it.
+2. Right-click the zip in File Explorer -> "Extract All..." -> Extract.
+3. Open the extracted SupportGen-v2 folder and double-click run.bat
+   (or in VS Code: File -> Open Folder -> choose the extracted SupportGen-v2 folder).
+4. Your browser opens http://localhost:5000. Without a Gemini key it runs in offline demo mode.
+   To use Gemini, put your key in the .env file: GEMINI_API_KEY=your-key

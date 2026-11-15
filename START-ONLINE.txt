@@ -1,0 +1,15 @@
+SupportGen - ONLINE deployment (Render, free)
+
+BEFORE: install Git (https://git-scm.com/download/win), make a free GitHub account, open this folder in VS Code.
+
+1. VS Code -> Source Control (Ctrl+Shift+G) -> Initialize Repository -> type a message -> Commit.
+   Check that ".env" is NOT in the file list.
+2. Click "Publish Branch" -> sign in to GitHub -> choose "Publish to GitHub private repository".
+3. https://render.com -> sign up with GitHub -> New -> Blueprint -> pick this repo.
+4. Paste your GEMINI_API_KEY when asked (empty = offline demo) -> Apply.
+5. Render -> your service -> Environment -> copy ADMIN_TOKEN (needed for Tickets / Upload / Delete buttons).
+6. Open the https://<name>.onrender.com link.
+
+Extra files: render.yaml (Render settings), Procfile (Railway and similar hosts), DEPLOY.md.
+Free tier: sleeps when idle (~1 min to wake), tickets/uploads are erased on restart.
+Your Gemini key pays for every chat: share the link only with people you trust.

@@ -1,0 +1,7 @@
+flask>=3.0
+numpy>=1.26
+pypdf>=4.0
+python-dotenv>=1.0
+google-genai>=1.0
+pytest>=8.0
+gunicorn>=21.2; sys_platform != "win32"

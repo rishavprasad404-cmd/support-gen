@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: supportgen
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    # one worker on purpose: chat memory is kept in RAM, so several workers would each forget the others' conversations
+    startCommand: gunicorn --workers 1 --threads 4 --timeout 120 "app:create_app()"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.3"
+      - key: GEMINI_API_KEY
+        sync: false          # you type the value in the Render dashboard, never in GitHub
+      - key: ADMIN_TOKEN
+        generateValue: true  # Render creates a random password; read it in the Environment tab
+      - key: REQUIRE_EMAIL_FOR_ORDERS
+        value: "1"
+      - key: COMPANY_NAME
+        value: ShopSphere
